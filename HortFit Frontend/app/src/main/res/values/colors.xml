@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <!-- Cores principais -->
+    <color name="primaryColor">#6200EE</color> <!-- Altere para a cor desejada -->
+    <color name="secondaryColor">#03DAC5</color> <!-- Altere para a cor desejada -->
+    <color name="primaryTextColor">#FFFFFF</color> <!-- Opcional, cor do texto nas abas -->
+</resources>

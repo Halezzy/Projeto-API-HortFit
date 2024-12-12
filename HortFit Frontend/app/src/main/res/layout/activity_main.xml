@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Header com TextView e ImageView -->
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp">
+
+        <TextView
+            android:id="@+id/textViewAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HortFit"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/imageViewLogo"/>
+
+        <TextView
+            android:id="@+id/textViewAppDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rede social do agricultor urbano"
+            android:textSize="16sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_below="@id/textViewAppName"
+            android:layout_alignStart="@id/textViewAppName"
+            android:layout_marginTop="10dp"/>
+
+        <ImageView
+            android:id="@+id/imageViewLogo"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/fitlogo"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+    <!-- Campos de Email e Senha -->
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:layout_below="@id/headerLayout"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:layout_below="@id/editTextEmail"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Layout para os botões Sign In e Sign Up -->
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/editTextPassword"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/buttonSignIn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sign In"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/buttonSignUp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sign Up"
+            android:layout_marginStart="8dp"/>
+
+    </LinearLayout>
+
+    <!-- TextView "Esqueceu a senha?" como um link -->
+    <TextView
+        android:id="@+id/textViewForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Esqueceu a senha?"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="14sp"
+        android:layout_below="@id/buttonLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"/>
+
+    <!-- ViewPager para o slider de imagens -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/imageSlider"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/textViewForgotPassword"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Botão "Sair" -->
+    <Button
+        android:id="@+id/buttonSair"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sair"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>
